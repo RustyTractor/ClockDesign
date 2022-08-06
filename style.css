@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap");
+body {
+  position: relative;
+  margin: 0;
+  background-color: #1c354e;
+  font-family: "Londrina Solid", cursive;
+  font-size: 20px;
+  color: rgb(255, 201, 201);
+
+  text-shadow: 0px 0px 20px red;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock-outline {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+
+  height: 110%;
+  width: 110%;
+
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+.clock-outline-2 {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+
+  height: 110%;
+  width: 110%;
+
+  border-radius: 50%;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.7) inset;
+}
+
+.num {
+  --rotation: 0deg;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  transform: rotate(var(--rotation));
+}
+
+.num1 {
+  --rotation: 30deg;
+}
+.num2 {
+  --rotation: 60deg;
+}
+.num3 {
+  --rotation: 90deg;
+}
+.num4 {
+  --rotation: 120deg;
+}
+.num5 {
+  --rotation: 150deg;
+}
+.num6 {
+  --rotation: 180deg;
+}
+.num7 {
+  --rotation: 210deg;
+}
+.num8 {
+  --rotation: 240deg;
+}
+.num9 {
+  --rotation: 270deg;
+}
+.num10 {
+  --rotation: 300deg;
+}
+.num11 {
+  --rotation: 330deg;
+}
+
+.indicator {
+  --rotation: 30;
+  position: absolute;
+  background-color: black;
+  height: 50%;
+  width: 5px;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  z-index: 1;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.sec {
+  width: 3px;
+  background-color: red;
+  height: 45%;
+  z-index: 3;
+}
+.min {
+  height: 40%;
+  width: 5px;
+  z-index: 2;
+}
+.hour {
+  height: 35%;
+  width: 7px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  background-color: #1c354e;
+  z-index: 4;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
